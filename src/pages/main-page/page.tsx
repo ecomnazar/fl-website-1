@@ -92,21 +92,38 @@ const MainPage = () => {
                         <Text title={"Анонимно"} className="text-primary text-center mb-4" />
                         <p className="text-[20px]">Сессии зашифрованы end-to-end encryption, хранятся только у вас</p>
                     </div>
-                    <div className="mb-12">
+                    <div>
                         <Text title={"Профессионально"} className="text-primary text-center mb-4" />
                         <p className="text-[20px]">
                             <span className="text-[#FF7081]"> За немалые деньги вы могли приобрести сессию у одного психолога в кабинете.</span>
                             <br /> <br />
                             А теперь, вам доступны многие практики психологии и огромный опыт человечества онлайн: передовые технологии в виде искусственного интеллекта, собранный в одном лице.
                             <br /> <br />
-                            И это лицо - сеанс.онлайн 
+                            И это лицо - сеанс.онлайн
                         </p>
                     </div>
                 </div>
             </section>
-        
-</div> 
-    ) 
+
+            {/*  */}
+
+            <section className="container mx-auto px-4 py-8">
+                <h2 className="text-[32px] font-[700] text-center mb-6">Сеанс<span className="text-primary">.online</span> - поможет <span className="text-primary">прямо сейчас</span></h2>
+                <p className="text-[20px] text-center">не ждите ухудшения или очереди на запись у психолога</p>
+                <Button title={"Попробовать"} className="mt-6" />
+            </section>
+
+            {/*  */}
+
+            <section className="container mx-auto px-4 py-8">
+                <h2 className="text-[32px] font-[700] text-center mb-6">Сеанс<span className="text-[#4D4E4E]">.online</span> - это <span className="text-primary">выгодно</span></h2>
+                <div className="grid grid-cols-2 gap-8">
+                    <div className="rounded-lg"></div>
+                </div>
+            </section>
+
+        </div>
+    )
 }
- 
+
 export default MainPage
