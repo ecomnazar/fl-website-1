@@ -11,6 +11,23 @@ const MainPage = () => {
                     <h4 className="text-xl font-[400]">Вход</h4>
                 </nav>
             </div>
+
+            {/*  */}
+
+            <section className="bg-[url('/images/header-image.png')] py-16 bg-cover bg-centers">
+                <div className="container mx-auto px-4 py-8">
+                    <h2 className="text-[32px] font-[700] mb-12 text-center">Персональный <span className="text-primary">цифровой психолог онлайн</span> - это:</h2>
+                    <p className="max-w-[300px] italic mb-8 text-center mx-auto">“В грусти таится тяжесть, но в освобождении от нее рождается легкость. Нужно просто начать говорить об этом.”  </p>
+                    <Text title={"Поговорим прямо сейчас?"} className="text-center" />
+                    <Button title={"Начать"} className="!bg-[#ffffff] !text-primary my-8" />
+                    <p className="text-[20px] text-center mt-4">Попробуйте сервис бесплатно на <span className="font-[700]">24 часа</span></p>
+                    <p className="text-[20px] text-center mt-12">Подробнее</p>
+                    <img src="/images/arrow-down.svg" className="mx-auto mt-6" />
+                </div>
+            </section>
+
+            {/*  */}
+
             <section className="container mx-auto px-4 py-8">
                 {/* <div className="rightLines">
                     <img className="absolute top-0 right-0" src="/images/lines/right-line-1.png" alt="" />
@@ -30,24 +47,44 @@ const MainPage = () => {
                     <p className="text-[#000000] text-center text-xl my-4">Это удобно: без очереди на запись и предоплаты, просто и выгодно - ваш персональный психолог всегда под рукой.</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="rounded-xl p-6 bg-primary relative">
-                            <Text title={"Общительный"} />
-                            <p className="text-[18px] max-w-[250px]">Искусственный интеллект, применяющий практики психологии</p>
-                            <img src="/images/icon-1.png" className="absolute bottom-0 right-0" />
+                            <div className="relative z-[10]">
+                                <Text title={"Общительный"} />
+                                <p className="text-[18px] max-w-[250px]">Искусственный интеллект, применяющий практики психологии</p>
+                            </div>
+                            <img src="/images/icon-1.png" className="absolute bottom-0 right-0 z-[1]" />
                         </div>
+
+                        {/*  */}
+
+                        <div className="md:hidden rounded-xl p-6 bg-gradient-to-br from-[#000000] to-primary relative">
+                            <div className="relative z-[10]">
+                                <Text title={"Реалистичный"} />
+                                <p className="text-[18px] max-w-[250px]">Разговаривает как реальный человек: эмпатичный и дружелюбный</p>
+                            </div>
+                            <img src="/images/icon-3.png" className="absolute top-0 right-0 z-[1]" />
+                        </div>
+
+                        {/*  */}
                         <div className="rounded-xl p-6 bg-primary relative">
-                            <Text title={"Поддерживает"} />
-                            <p className="text-[18px] max-w-[250px]">Умеет разговаривать на любые темы, полностью конфиденциально</p>
-                            <img src="/images/icon-2.png" className="absolute bottom-0 right-0" />
+                            <div className="relative z-[10]">
+                                <Text title={"Поддерживает"} />
+                                <p className="text-[18px] max-w-[250px]">Умеет разговаривать на любые темы, полностью конфиденциально</p>
+                            </div>
+                            <img src="/images/icon-2.png" className="absolute bottom-0 right-0 z-[1]" />
                         </div>
-                        <div className="rounded-xl p-6 bg-gradient-to-br from-[#000000] to-primary relative">
-                            <Text title={"Реалистичный"} />
-                            <p className="text-[18px] max-w-[250px]">Разговаривает как реальный человек: эмпатичный и дружелюбный</p>
-                            <img src="/images/icon-3.png" className="absolute top-0 right-0" />
+                        <div className="hidden md:block rounded-xl p-6 bg-gradient-to-br from-[#000000] to-primary relative">
+                            <div className="relative z-[10]">
+                                <Text title={"Реалистичный"} />
+                                <p className="text-[18px] max-w-[250px]">Разговаривает как реальный человек: эмпатичный и дружелюбный</p>
+                            </div>
+                            <img src="/images/icon-3.png" className="absolute top-0 right-0 z-[1]" />
                         </div>
                         <div className="rounded-xl p-6 bg-gradient-to-bl from-[#000000] to-primary relative">
-                            <Text title={"Помогает"} />
-                            <p className="text-[18px] max-w-[250px]">Подбирает нужную методику помощи, исходя из вашей ситуации</p>
-                            <img src="/images/icon-4.png" className="absolute top-0 right-0" />
+                            <div className="relative z-[10]">
+                                <Text title={"Помогает"} />
+                                <p className="text-[18px] max-w-[250px]">Подбирает нужную методику помощи, исходя из вашей ситуации</p>
+                            </div>
+                            <img src="/images/icon-4.png" className="absolute top-0 right-0 z-[1]" />
                         </div>
                     </div>
                     <Button title={"Начать"} className="mt-8 mb-6" />
@@ -119,12 +156,14 @@ const MainPage = () => {
                 <h2 className="text-[32px] font-[700] text-center mb-6">Сеанс<span className="text-[#4D4E4E]">.online</span> - это <span className="text-primary">выгодно</span></h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="rounded-lg relative pb-8 overflow-hidden bg-[#ffffff]">
-                        <img src="/images/red-bg.svg" className="h-[200px] sm:h-[250px] object-fill object-bottom  absolute top-0 left-0 w-full z-[0]" />
+                        <div className="bg-[#B53535] h-[100px] absolute top-0 left-0 w-full z-[0]">
+                            <img src="/images/red-bg.svg" className="w-full [min-w: 300px]:hidden translate-y-[30px] lg:translate-y-[10px] xl:translate-y-[-10px]" />
+                        </div>
                         {/* <img src="/images/red-bg-big.svg" className="absolute h-[200px] object-cover object-bottom -top-1/4 left-0 w-screen z-[0]" /> */}
                         <div className="relative z-[10]">
                             <div className="text-[#000000] bg-[#ffffff] rounded-bl-2xl w-fit rounded-br-2xl px-10 py-2 font-[700] mx-auto text-[16px] mb-4">Психолог</div>
                             <p className="text-center text-[24px]">3500 руб <br /><span className="text-[16px]">средняя цена за 1 час</span></p>
-                            <div className="flex flex-col w-fit mx-auto mt-12">
+                            <div className="flex flex-col w-fit mx-auto mt-24 md:mt-12">
                                 <div className="flex items-center gap-x-8">
                                     <img src="/images/x-icon.svg" className="w-[18px]" />
                                     <p className="max-w-[200px] text-[#000000] text-lg">Дорого</p>
@@ -147,9 +186,9 @@ const MainPage = () => {
                         </div>
                     </div>
                     <div className="rounded-lg relative pb-8 overflow-hidden bg-[#ffffff]">
-                        <img src="/images/blue-bg.svg" className="absolute top-0 left-0 w-full z-[0]" />
-                        {/* <img src="/images/blue-bg-big.svg" className="block lg:hidden absolute -top-1/4 left-0 w-screen z-[0]" /> */}
-                        {/* <img src="/images/blue-bg.svg" className="absolute top-0 left-0 w-full z-[0]" /> */}
+                        <div className="bg-[#0094FF] h-[100px] absolute top-0 left-0 w-full z-[0]">
+                            <img src="/images/blue-bg.svg" className="w-full [min-w: 300px]:hidden translate-y-[30px] lg:translate-y-[10px] xl:translate-y-[-10px]" />
+                        </div>
                         <div className="relative z-[10]">
                             <div className="text-primary bg-[#ffffff] rounded-bl-2xl w-fit rounded-br-2xl px-10 py-2 font-[700] mx-auto text-[16px] mb-4">Психолог</div>
                             <p className="text-center text-[24px]">390 руб <br /><span className="text-[16px]">Целый день</span></p>
@@ -203,6 +242,8 @@ const MainPage = () => {
                 </div>
             </section>
 
+            {/*  */}
+
             <section className="container mx-auto px-4 py-8">
                 <h2 className="text-[32px] font-[700] text-center mb-6">Мы вдохновляемся вашими отзывами!</h2>
                 <div className="min-h-[250px] relative">
@@ -227,22 +268,33 @@ const MainPage = () => {
                 </div>
             </section>
 
+            {/*  */}
+
             <section className="container mx-auto px-4 py-8">
                 <img src="/images/logo.svg" className="w-[250px] mx-auto mb-24" />
                 <div className="grid grid-cols-1  md:grid-cols-3 gap-8">
-                    <div className="bg-[#000000] p-4 h-[300px] flex flex-col items-center justify-center md:justify-start py-12 rounded-lg bg-gradient-to-br from-[#000000] via-[#232427] to-[#000000]">
+                    <div className="relative bg-[#000000] p-4 h-[300px] overflow-hidden flex flex-col items-center justify-center md:justify-start py-12 rounded-lg bg-gradient-to-br from-[#000000] via-[#232427] to-[#000000]">
+                        <div className="absolute -translate-x-1/2 -translate-y-1/2  top-0 left-0 rotate-[45deg] w-[150px] h-[150px] bg-primary flex items-center justify-end">
+                            <img src="/images/energy-icon.svg" className="rotate-[135deg] -translate-x-1/2 w-[30px]" />
+                        </div>
                         <div className="flex items-center justify-center w-[70px] h-[70px] mx-auto border-2 border-primary rounded-full">
                             3K
                         </div>
                         <p className="max-w-[200px] text-[16px] md:text-[19px] text-center mx-auto mt-8">человек, уже ощутили преимущества сервиса</p>
                     </div>
-                    <div className="bg-[#000000] p-4 h-[300px] flex flex-col items-center justify-center md:justify-start py-12 rounded-lg bg-gradient-to-br from-[#000000] via-[#232427] to-[#000000]">
+                    <div className="relative bg-[#000000] p-4 h-[300px] overflow-hidden flex flex-col items-center justify-center md:justify-start py-12 rounded-lg bg-gradient-to-br from-[#000000] via-[#232427] to-[#000000]">
+                        <div className="absolute -translate-x-1/2 -translate-y-1/2  top-0 left-0 rotate-[45deg] w-[150px] h-[150px] bg-primary flex items-center justify-end">
+                            <img src="/images/energy-icon.svg" className="rotate-[135deg] -translate-x-1/2 w-[30px]" />
+                        </div>
                         <div className="flex items-center justify-center w-[70px] h-[70px] mx-auto border-2 border-primary rounded-full">
                             1,4K
                         </div>
                         <p className="max-w-[200px] text-[16px] md:text-[19px] text-center mx-auto mt-8">положительных отзывов</p>
                     </div>
-                    <div className="bg-[#000000] p-4 h-[300px] flex flex-col items-center justify-center md:justify-start py-12 rounded-lg bg-gradient-to-br from-[#000000] via-[#232427] to-[#000000]">
+                    <div className="relative bg-[#000000] p-4 h-[300px] overflow-hidden flex flex-col items-center justify-center md:justify-start py-12 rounded-lg bg-gradient-to-br from-[#000000] via-[#232427] to-[#000000]">
+                        <div className="absolute -translate-x-1/2 -translate-y-1/2  top-0 left-0 rotate-[45deg] w-[150px] h-[150px] bg-primary flex items-center justify-end">
+                            <img src="/images/energy-icon.svg" className="rotate-[135deg] -translate-x-1/2 w-[30px]" />
+                        </div>
                         <div className="flex items-center justify-center w-[70px] h-[70px] mx-auto border-2 border-primary rounded-full">
                             24
                         </div>
@@ -250,6 +302,64 @@ const MainPage = () => {
                     </div>
                 </div>
             </section>
+
+            {/*  */}
+
+            <section className="container mx-auto px-4 py-8">
+                <h2 className="text-[32px] font-[700] text-center mb-6">Когда начать?<span className="text-primary">Сейчас.</span></h2>
+                <p className="text-[20px] text-center">Попробуйте сервис <span className="text-primary">бесплатно на <span className="font-[700]">24 часа</span></span></p>
+                <Button title={"Попробовать"} className="mt-6" />
+            </section>
+
+            {/*  */}
+
+            <section className="container mx-auto px-4 py-8">
+                <div className="h-[400px] bg-[#ffffff] rounded-xl flex items-center gap-x-8 relative p-4 overflow-hidden">
+                    <img src="/images/update-section-image.svg" className="h-[80%] md:h-full absolute top-1/2 -translate-y-1/2 -translate-x-[70%] sm:-translate-x-[50%]" />
+                    <div className="w-1/2 ml-auto mt-[-50px] sm:mr-[50px] lg:mr-[150px]">
+                        <Text title={"Новое обновление"} className="text-[#000000] mb-8" />
+                        <ul className="text-[#000000] flex flex-col gap-y-3 md:gap-y-8 text-[12px] sm:text-[18px] max-w-[600px]">
+                            <li>эффективных видов и методик психотерапии, на которых обучен интеллект</li>
+                            <li>секунды, столько требуется сервису, чтобы дать вам ответ</li>
+                            <li>безгранично: сеанс психотерапии доступен круглосуточно, когда удобно вам</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            {/*  */}
+
+            <section className="container mx-auto px-4 py-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="h-[100px] p-4 border border-[#ffffff]/20 rounded-xl flex items-start justify-between">
+                        <p>Правовая информация</p>
+                        <img src="/images/footer-icon-1.svg" className="" />
+                    </div>
+                    <div className="h-[100px] p-4 border border-[#ffffff]/20 rounded-xl flex items-start justify-between">
+                        <p>Политика конфиденциальности</p>
+                        <img src="/images/footer-icon-2.svg" className="" />
+                    </div>
+                    <div className="h-[100px] p-4 border border-[#ffffff]/20 rounded-xl flex items-start justify-between">
+                        <p>Обратная связь</p>
+                        <img src="/images/footer-icon-3.svg" className="" />
+                    </div>
+                    <div className="h-[100px] p-4 border border-[#ffffff]/20 rounded-xl flex items-start justify-between">
+                        <p>Соискателям & Инвесторам</p>
+                        <img src="/images/footer-icon-4.svg" className="" />
+                    </div>
+                </div>
+            </section>
+
+            {/*  */}
+
+            <footer className="container mx-auto px-4 py-8">
+                <div className="flex items-center justify-center gap-x-4">
+                    <a target="_blank" href="https://vk.com/seance.online"><img src="/images/vk-logo.svg" /></a>
+                    <a target="_blank" href="https://t.me/seanceonline"><img src="/images/telegram-logo.svg" /></a>
+                    <a href="#"><img src="/images/dzen-logo.svg" /></a>
+                </div>
+                <p className="text-center mt-8">Сеанс.online - все права защищены (с) 2024 г.</p>
+            </footer>
 
         </div>
     )
