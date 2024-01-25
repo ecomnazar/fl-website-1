@@ -1,8 +1,30 @@
+import React from "react"
 import Button from "../../shared/ui/button"
 import SecondSession from "../../shared/ui/session/second-session"
 import Text from "../../shared/ui/text"
+// @ts-ignore
+import CLOUDS from 'vanta/dist/vanta.clouds.min'
 
 const MainPage = () => {
+    const [vantaEffect, setVantaEffect] = React.useState(null)
+    const myRef = React.useRef(null)
+    React.useEffect(() => {
+        if (!vantaEffect) {
+            setVantaEffect(CLOUDS({
+                el: myRef.current,
+                cloudColor: "#628BBB",
+                skyColor: "#30332F",
+                sunColor: "#30332F",
+                sunlightColor: "30332F",
+                cloudShadowColor: "#30332F",
+                sunGlareColor: "#30332F",
+            }))
+        }
+        return () => {
+            // @ts-ignore
+            if (vantaEffect) vantaEffect.destroy()
+        }
+    }, [vantaEffect])
     return (
         <div>
             <div className="container mx-auto px-4">
@@ -14,7 +36,7 @@ const MainPage = () => {
 
             {/*  */}
 
-            <section className="bg-[url('/images/header-image.png')] py-16 bg-cover bg-centers">
+            <section ref={myRef} className="bg-[url('/images/header-image.png')] py-16 bg-cover bg-centers">
                 <div className="container mx-auto px-4 py-8">
                     <h2 className="text-[32px] font-[700] mb-12 text-center">Персональный <span className="text-primary">цифровой психолог онлайн</span> - это:</h2>
                     <p className="max-w-[300px] italic mb-8 text-center mx-auto">“В грусти таится тяжесть, но в освобождении от нее рождается легкость. Нужно просто начать говорить об этом.”  </p>
@@ -256,9 +278,9 @@ const MainPage = () => {
                                 <p className="text-[13px]">9 декабря 2023 г.</p>
                             </div>
                             <div className="flex items-center  sm:gap-x-1">
-                                {Array.from({ length: 6 }).map((item) => {
+                                {Array.from({ length: 6 }).map((_, i) => {
                                     return (
-                                        <img src="/images/star.svg" className="w-[20px]" />
+                                        <img key={i} src="/images/star.svg" className="w-[20px]" />
                                     )
                                 })}
                             </div>
